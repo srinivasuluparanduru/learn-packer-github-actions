@@ -37,11 +37,15 @@ source "amazon-ebs" "windows-2019" {
     "Release"     = "Latest"
     "Created-by"  = "Packer"
   }
+  aws_polling {
+    delay_seconds = 10
+    max_attempts  = 120
+  }
 }
 
 build {
   sources = ["source.amazon-ebs.windows-2019"]
-
+  
   post-processor "manifest" {
   }
 }
