@@ -1,4 +1,4 @@
-name: Windows Build and Deploy
+name: Linux Build and Deploy
 on:
   workflow_dispatch:
    inputs:
@@ -32,7 +32,6 @@ jobs:
 
       - name: Packer Build - Branches
         if: startsWith(github.ref, 'refs/heads/')
-        run: packer build aws-windows.pkr.hcl
+        run: packer build aws-ubuntu.pkr.hcl
 
   
-#run: packer build .
