@@ -1,4 +1,4 @@
-name: Windows Build and Deploy
+name: Build and Deploy
 on:
   workflow_dispatch:
    inputs:
@@ -7,11 +7,21 @@ on:
         description: Environment
         options:
          - "development"
+      environmentPath:
+        type: choice
+        description: EnvironmentPath
+        options:
+        - Ubuntu
+        - Windows
 
 jobs:
   build-artifact:
     name: Build
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory : ${{ github.event.inputs.environmentPath }}
+        shell: bash
     steps:
       - name: Setup Packer
         uses: hashicorp/setup-packer@main
@@ -35,4 +45,3 @@ jobs:
         run: packer build .
 
   
-#run: packer build .

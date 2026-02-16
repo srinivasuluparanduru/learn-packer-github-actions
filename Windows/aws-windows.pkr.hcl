@@ -38,8 +38,8 @@ source "amazon-ebs" "windows-2019" {
     "Created-by"  = "Packer"
   }
   aws_polling {
-    delay_seconds = 10
-    max_attempts  = 120
+    delay_seconds = 30
+    max_attempts  = 240
   }
 }
 
