@@ -26,7 +26,7 @@ source "amazon-ebs" "windows-2019" {
   region        = "eu-west-1"
  
   source_ami     = "${data.amazon-ami.windows_2019.id}"
-  user_data_file = "./scripts/SetUpWinRM.ps1"
+  user_data_file = "scripts/SetUpWinRM.ps1"
   winrm_insecure = true
   winrm_use_ssl  = true
   winrm_username = "Administrator"
