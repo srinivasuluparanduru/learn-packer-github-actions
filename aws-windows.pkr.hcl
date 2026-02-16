@@ -12,7 +12,7 @@ data "amazon-ami" "windows_2019" {
     name = "Windows_Server-2019-English-Full-Base-*"
   }
   most_recent = true
-  owners      = ["801119661308"] #801119661308
+  owners      = ["801119661308"] 
   region      = "eu-west-1"
 }
 
