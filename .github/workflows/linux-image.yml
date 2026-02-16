@@ -32,6 +32,6 @@ jobs:
 
       - name: Packer Build - Branches
         if: startsWith(github.ref, 'refs/heads/')
-        run: packer build aws-ubuntu.pkr.hcl
+        run: packer build .
 
   
