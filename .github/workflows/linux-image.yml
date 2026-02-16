@@ -1,4 +1,4 @@
-name: Linux Build and Deploy
+name: Build and Deploy
 on:
   workflow_dispatch:
    inputs:
@@ -7,11 +7,20 @@ on:
         description: Environment
         options:
          - "development"
+      environmentPath:
+        type: choice
+        description: EnvironmentPath
+        options:
+        - Ubuntu
 
 jobs:
   build-artifact:
     name: Build
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory : ${{ github.event.inputs.environmentPath }}
+        shell: bash
     steps:
       - name: Setup Packer
         uses: hashicorp/setup-packer@main

@@ -8,7 +8,7 @@ packer {
 }
 
 source "amazon-ebs" "ubuntu" {
-  ami_name      = "learn-packer-linux-aws"
+  ami_name      = "learn-packer-linux-aws{{timestamp}}"
   instance_type = "t3.medium"
   region        = "eu-west-1"
   
