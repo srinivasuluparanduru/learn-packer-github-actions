@@ -42,6 +42,6 @@ jobs:
 
       - name: Packer Build - Branches
         if: startsWith(github.ref, 'refs/heads/')
-        run: packer build .
+        run: packer build --var-file=variables.pkrvars.hcl .
 
   
