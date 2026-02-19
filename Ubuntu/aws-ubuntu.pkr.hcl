@@ -7,18 +7,13 @@ packer {
   }
 }
 
+
 source "amazon-ebs" "ubuntu" {
-  ami_name      = "learn-packer-linux-aws{{timestamp}}"
-  instance_type = "t3.medium"
-  region        = "eu-west-1"
+  ami_name      = var.ami_name
+  instance_type = var.instance_type
+  region        = var.region
   
-  tags = {
-    "Name"        = "MyLinuxImage"
-    "Environment" = "Production"
-    "OS_Version"  = "Linux"
-    "Release"     = "Latest"
-    "Created-by"  = "Packer"
-  }
+  tags = var.tags
 
   source_ami_filter {
     filters = {
@@ -37,4 +32,24 @@ build {
   sources = [
     "source.amazon-ebs.ubuntu"
   ]
+}
+
+#########################################################################################
+
+variable "region" {
+  type    = string
+}
+
+variable "instance_type" {
+  type    = string
+}
+
+
+variable "tags" {
+  type = map(string)
+}
+
+variable "ami_name" {
+  type = string
+  default =  "learn-packer-linux-aws{{timestamp}}"
 }
