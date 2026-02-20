@@ -4,7 +4,7 @@ Steps to use this repository - Clone the repository and add the variables as men
     -   AWS_ACCESS_KEY_ID
     -   AWS_SECRET_ACCESS_KEY
    
-       <img width="1005" height="756" alt="Secret Variables" src="https://github.com/user-attachments/assets/5edf3b74-0530-4c98-b91f-8afbf779bdff" />
+ <img width="1005" height="756" alt="Secret Variables" src="https://github.com/user-attachments/assets/5edf3b74-0530-4c98-b91f-8afbf779bdff" />
 
 2. Add normal variable with tthe value of your choice and in my case i have choosen ireland region i.e., eu-west-1
     - AWS_Region
