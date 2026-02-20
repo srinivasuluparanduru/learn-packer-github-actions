@@ -6,7 +6,7 @@ Steps to use this repository - Clone the repository and add the variables as men
    
  <img width="1005" height="756" alt="Secret Variables" src="https://github.com/user-attachments/assets/5edf3b74-0530-4c98-b91f-8afbf779bdff" />
 
-2. Add normal variable with tthe value of your choice and in my case i have choosen ireland region i.e., eu-west-1
+2. Add respository variable with the value of your choice and in my case i have choosen ireland region i.e., eu-west-1
     - AWS_Region
 
    <img width="822" height="551" alt="Repository Variables" src="https://github.com/user-attachments/assets/0474b68d-39b4-42d8-b473-9dfc6ee63bbc" />
