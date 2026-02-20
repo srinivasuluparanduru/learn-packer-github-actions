@@ -1,5 +1,4 @@
-<b>Steps to use this repository<b>
-Clone the repository and add the variables as mentioned below
+Steps to use this repository - Clone the repository and add the variables as mentioned below
 
 1. Add the secret variables
     -   AWS_ACCESS_KEY_ID
